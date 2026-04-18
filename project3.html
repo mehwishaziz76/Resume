@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: Arial,  sans-serif;
+        background-color: #f4f6f8;
+        padding: 30px;
+    }
+    form{
+        max-width: 800px;
+        margin: auto;
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 8px;
+    }
+    h2{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    fieldset{
+        display:block;
+        margin-top:12px;
+        font-weight:600;
+    }
+    input,select,textarea{
+        width: 100%;
+        padding:8px;
+        margin-top: 5px;
+    }
+    .inline{
+        width: auto;
+        margin-right: 10px;
+    }
+    .row{
+        display: flex;
+        gap: 20px;
+    }
+    .row div{
+        flex:1;
+    }
+    button{
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <form action="">
+         <h2>Student Registration Form</h2>
+         <!--  Personal Information -->
+         <fieldset>
+            <legend>Personal Information</legend>
+            <div class="row">
+                <div>
+                    <label for="First name">First Name</label>
+                    <input type="text"  id="First name" placeholder="Enter first name" required>
+                </div>
+                  <div>
+                    <label for="lname">Last Name</label>
+                    <input type="text"  id="lname" placeholder="Enter last name" required>
+                </div>
+            </div>
+            <label for="email">Email</label>
+            <input type="email"  id="email"  placeholder="example@gmail.com" required>
+             <label for="password">Password</label>
+            <input type="password" id="password" placeholder="******" required>
+            <label for="Phone Number">Phone Number</label>
+            <input type="number" id="Phone Number" placeholder="03XXXXXXXXX" required>
+           <label for="DOB">Date of Birth</label>
+            <input type="date" id="DOB" required >
+            <label for="gender">Gender</label>
+            <br>
+            <input class="inline" type="radio" id="Male" name="gender">Male
+            <input class="inline" type="radio" id="Female" name="gender">Female
+            <input class="inline" type="radio" id="Others" name="gender">Others
+         </fieldset>
+         <!-- Educational Details -->
+         <fieldset>
+            <legend>Educational Details</legend>
+            <label for="qualifications">Highest Qualifications</label>
+            <select id="qualifications" name="qualifications">
+                <option value="select">Select</option>
+                <option value="Matric">Matric</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Bachelor's">Bachelor's</option>
+                <option value="Masters">Masters</option>
+            </select>
+            <label for="field">Field of Study</label>
+            <select id="Field " name="Field ">
+            <optgroup label="Computer Science"></optgroup>
+            <option value=" Web">  Web</option>
+              <option value="AI/ML"> AI/ML</option>
+                <option value=" Data Science"> Data Science</option>
+                
+                <optgroup label="Engineering"></optgroup>
+            <option value="Software Engineering">Software Engineering</option>
+              <option value="Electrical Engineering ">Electrical Engineering </option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                
+        </select>
+        <label for="Skills">Skills</label>
+        <br><br>
+        <label for="HTML">HTML</label>
+        <input  class="inline" type="checkbox"  id="HTML"   >
+        <label for="CSS">CSS</label>
+        <input class="inline"  type="checkbox"  id="CSS"   >
+        <label for="Javascript">Javascript</label>
+        <input class="inline"   type="checkbox"  id="Javascript"  >
+        <label for="React">React</label>
+        <input class="inline"  type="checkbox"  id="React"   >
+
+         </fieldset>
+         <!--Uploads & Preferences  -->
+         <fieldset>
+            <legend>Uploads & Preferences</legend>
+            <label for="Resume">Upload Resume</label>
+            <input type="file" id="resume">
+            <label for="time">Available Time</label>
+            <input type="time" id="time">
+            <label for="experience">Experience level(0-10)</label>
+            <input type="range"  min="0" max="10" id="experience" >
+         </fieldset>
+         <!-- Additional Information -->
+         <fieldset>
+            <legend>Additional Information</legend>
+            <label for="about">About Yourself</label>
+            <textarea row="4" id="about" placeholder="write somthing about yourself"></textarea>
+            <label for="agree">
+                <input type="checkbox" id="agree">
+                I agree to terms and conditions
+            </label>
+
+         </fieldset>
+         <button type="submit">Submit</button>
+         <button type="Reset">Reset</button>
+    </form>
+   
+</body>
+</html>
